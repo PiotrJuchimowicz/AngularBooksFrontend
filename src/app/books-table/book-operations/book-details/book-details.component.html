@@ -1,0 +1,88 @@
+<p-card *ngIf="displayBookDetails">
+  <p-header>
+    <h2 i18n="@@bookDetailsHeader">Book details</h2>
+  </p-header>
+
+  <div class="p-grid">
+    <div class="p-col">
+      <div class="box">
+        <div>ISBN</div>
+        <div>{{book.isbn}}</div>
+      </div>
+    </div>
+
+    <div class="p-col">
+      <div class="box">
+        <div i18n="@@title">Title</div>
+        <div>{{book.title}}</div>
+      </div>
+    </div>
+
+    <div class="p-col">
+      <div class="box">
+        <div i18n="@@numberOfPages">Number of pages</div>
+        <div>{{book.numberOfPages}}</div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="p-grid">
+    <div class="p-col">
+      <div class="box">
+        <div i18n="@@releaseDate">Release date</div>
+        <div>{{book.releaseDate}}</div>
+      </div>
+    </div>
+
+    <div class="p-col">
+      <div class="box">
+        <div i18n="@@author">Author</div>
+        <div>{{book.author.name + ' ' + book.author.surname}}</div>
+      </div>
+    </div>
+
+    <div class="p-col">
+      <div class="box">
+        <div i18n="@@dictionaryCategories">Dictionary categories</div>
+        <div>
+        <span *ngFor="let dictionaryCategory of book.dictionaryCategories">
+          {{dictionaryCategory.name}},
+        </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div>
+    <span i18n="@@borrower">Borrower</span>
+    <span *ngIf="book.borrower; else noBorrower">
+      {{book.borrower.name + ' ' + book.borrower.surname}}
+    </span>
+    <ng-template #noBorrower>
+      -
+    </ng-template>
+  </div>
+  <div class="ui-inputgroup">
+    <label for="borrowerInput">
+      <p-dropdown id="borrowerInput" [options]="users" [(ngModel)]="borrowerInput" placeholder="Choose"
+                  i18n-placeholder="@@choose"></p-dropdown>
+    </label>
+  </div>
+  <hr>
+
+  <p-footer>
+    <div class="p-grid">
+      <div class="p-col-fixed">
+        <button pButton type="button" i18n-label="@@borrowButton" label="Borrow" icon="pi pi-plus" class="ui-button"
+                [disabled]="borrowerInput === undefined"
+                (click)="borrowBook()"></button>
+      </div>
+      <div class="p-col-fixed">
+        <button pButton type="button" i18n-label="@@backButton" label="Back" icon="pi pi-chevron-left"
+                class="ui-button-secondary"
+                routerLink="/"></button>
+      </div>
+    </div>
+  </p-footer>
+</p-card>

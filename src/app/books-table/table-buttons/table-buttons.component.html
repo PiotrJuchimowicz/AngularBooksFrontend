@@ -1,0 +1,23 @@
+<div class="p-grid">
+  <div class="p-col-fixed">
+    <button pButton type="button" label="Add" i18n-label="@@addBookButton" icon="pi pi-plus" class="ui-button"
+            (click)="showAddDialog()"></button>
+  </div>
+  <div class="p-col-fixed">
+    <button pButton type="button" label="Edit" i18n-label="@@editBookButton" icon="pi pi-user-edit"
+            class="ui-button-success"
+            [disabled]="doesActionsOnBookDisabled"
+            (click)="showEditDialog()"></button>
+  </div>
+  <div class="p-col-fixed">
+    <button pButton type="button" label="Delete" i18n-label="@@deleteBookButton" icon="pi pi-minus-circle"
+            class="ui-button-danger"
+            [disabled]="doesActionsOnBookDisabled"
+            (click)="deleteSelected()"></button>
+  </div>
+  <div class="p-col-fixed">
+    <button pButton type="button" label="Show details" i18n-label="@@showBookDetailsButton" icon="pi pi-info"
+            class="ui-button-info"
+            [disabled]="doesActionsOnBookDisabled" (click)="showBookDetails()"></button>
+  </div>
+</div>

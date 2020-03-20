@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="saveBookHeader" datatype="html">
+        <source>Save book</source>
+        <target>Zapisz książkę</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-save/book-save.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title" datatype="html">
+        <source>Title</source>
+        <target>Tytuł</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-save/book-save.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-filter/table-filter.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/books-table.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-details/book-details.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="numberOfPages" datatype="html">
+        <source>Number of pages</source>
+        <target>Liczba stron</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-save/book-save.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-filter/table-filter.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/books-table.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-details/book-details.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="releaseDate" datatype="html">
+        <source>Release date</source>
+        <target>Data wydania</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-save/book-save.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-filter/table-filter.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/books-table.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-details/book-details.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="author" datatype="html">
+        <source>Author</source>
+        <target>Autor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-save/book-save.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/books-table.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-details/book-details.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dictionaryCategories" datatype="html">
+        <source>Dictionary categories</source>
+        <target>Słowniki gatunkowe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-save/book-save.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-filter/table-filter.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/books-table.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-details/book-details.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="save" datatype="html">
+        <source>Save</source>
+        <target>Zapisz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-save/book-save.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="back" datatype="html">
+        <source>Back</source>
+        <target>Wróć</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-save/book-save.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="authors" datatype="html">
+        <source>Authors</source>
+        <target>Autorzy</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-filter/table-filter.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="borrowers" datatype="html">
+        <source>Borrowers</source>
+        <target>Wypożyczający</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-filter/table-filter.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="buttonFilter" datatype="html">
+        <source>Filter</source>
+        <target>Filtruj</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-filter/table-filter.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="buttonClearFilter" datatype="html">
+        <source>Clear all</source>
+        <target>Wyczyść wszystko</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-filter/table-filter.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="booksTableHeader" datatype="html">
+        <source>List of books</source>
+        <target>Lista książek</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/books-table.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="borrower" datatype="html">
+        <source>Borrower</source>
+        <target>Wypożyczający</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/books-table.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-details/book-details.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addBookButton" datatype="html">
+        <source>Add</source>
+        <target>Dodaj</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-buttons/table-buttons.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="editBookButton" datatype="html">
+        <source>Edit</source>
+        <target>Edytuj</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-buttons/table-buttons.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="deleteBookButton" datatype="html">
+        <source>Delete</source>
+        <target>Usuń</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-buttons/table-buttons.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="showBookDetailsButton" datatype="html">
+        <source>Show details</source>
+        <target>Pokaż szczegóły</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/table-buttons/table-buttons.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bookDetailsHeader" datatype="html">
+        <source>Book details</source>
+        <target>Szczegóły książki</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-details/book-details.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="choose" datatype="html">
+        <source>Choose</source>
+        <target>Wybierz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-details/book-details.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="borrowButton" datatype="html">
+        <source>Borrow</source>
+        <target>Wypożycz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-details/book-details.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="backButton" datatype="html">
+        <source>Back</source>
+        <target>Wróć</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/books-table/book-operations/book-details/book-details.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

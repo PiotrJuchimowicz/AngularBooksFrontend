@@ -1,0 +1,94 @@
+<div>
+  <h1 i18n="@@booksTableHeader">List of books</h1>
+  <app-table-filter (filterBooksEvent)="displayFilteredBooks($event)"
+                    (clearFilterEvent)="clearFilters()"></app-table-filter>
+  <br>
+  <br>
+  <p-table [columns]="columns" [value]="books" [lazy]="true" (onLazyLoad)="loadDataLazy($event)"
+           [totalRecords]="totalCount" [rows]="pageSize" [paginator]="true" [loading]="loading" [first]="0">
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="isbn">
+          ISBN
+          <p-sortIcon field="isbn"></p-sortIcon>
+        </th>
+        <th pSortableColumn="title">
+          <span i18n="@@title">Title</span>
+          <p-sortIcon field="title"></p-sortIcon>
+        </th>
+        <th pSortableColumn="numberOfPages">
+          <span i18n="@@numberOfPages">Number of pages</span>
+          <p-sortIcon field="numberOfPages"></p-sortIcon>
+        </th>
+        <th pSortableColumn="releaseDate">
+          <span i18n="@@releaseDate">Release date</span>
+          <p-sortIcon field="releaseDate"></p-sortIcon>
+        </th>
+        <th pSortableColumn="author">
+          <span i18n="@@author">Author</span>
+          <p-sortIcon field="author"></p-sortIcon>
+        </th>
+        <th pSortableColumn="borrower">
+          <span i18n="@@borrower">Borrower</span>
+          <p-sortIcon field="borrower"></p-sortIcon>
+        </th>
+        <th pSortableColumn="dictionaryCategories">
+          <span i18n="@@dictionaryCategories">Dictionary categories</span>
+          <p-sortIcon field="dictionaryCategories"></p-sortIcon>
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-book [pSelectableRow]="selectedBook">
+      <tr (click)="selectBook(book)" [class.ui-state-highlight]="selectedBook != null && selectedBook.id == book.id"
+          [hidden]="loading"
+          appFontWeight>
+
+
+        <td *ngFor="let column of columns">
+          <div [ngSwitch]="column.field">
+            <div *ngSwitchCase="'author'">
+              <ng-container *ngIf="book[column.field] !== null; else empty">
+                {{book[column.field].name + ' ' + book[column.field].surname}}
+              </ng-container>
+            </div>
+
+            <div *ngSwitchCase="'borrower'">
+              <ng-container *ngIf="book[column.field] !== null; else empty">
+                {{book[column.field].name + ' ' + book[column.field].surname}}
+              </ng-container>
+
+            </div>
+
+            <ng-template #empty>
+              -
+            </ng-template>
+
+            <div *ngSwitchCase="'dictionaryCategories'">
+                <span *ngFor="let dictionary of book[column.field] | sortDictionaryCategories">
+                {{dictionary.name}},
+                </span>
+            </div>
+            <div *ngSwitchDefault>
+              {{book[column.field]}}
+            </div>
+          </div>
+        </td>
+
+      </tr>
+    </ng-template>
+
+  </p-table>
+</div>
+<br>
+
+<div>
+  <app-book-save (bookSavedEvent)="onSave()"></app-book-save>
+  <app-book-save (bookSavedEvent)="onSave()" [book]="selectedBook"></app-book-save>
+</div>
+
+<app-table-buttons [doesActionsOnBookDisabled]="selectedBook==null" (addButtonClicked)="showAddDialog()"
+                   (deleteButtonClicked)="deleteSelected()" (editButtonClicked)="showEditDialog()"
+                   (bookDetailsButtonClicked)="navigateToBookDetails()">
+
+</app-table-buttons>

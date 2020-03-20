@@ -1,0 +1,82 @@
+<p-dialog [(visible)]="display" modal="true" [resizable]="false" [closable]="false"
+          [contentStyle]="{'overflow': 'visible'}">
+  <p-header>
+    <span i18n="@@saveBookHeader">Save book</span>
+  </p-header>
+
+  <div class="p-col-fixed">
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <label for="isbnInput">ISBN
+            <input id="isbnInput" type="text" [(ngModel)]="isbnInput" pInputText>
+          </label>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <label for="titleInput">
+            <span i18n="@@title">Title</span>
+            <input id="titleInput" type="text" [(ngModel)]="titleInput" pInputText>
+          </label>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <label for="numberOfPagesInput">
+            <span i18n="@@numberOfPages">Number of pages</span>
+            <input id="numberOfPagesInput" type="number" min="1" [(ngModel)]="numberOfPagesInput" pInputText>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-col-fixed">
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <label for="releaseDateInput">
+            <span i18n="@@releaseDate">Release date</span>
+            <p-calendar id="releaseDateInput" dateFormat="dd-mm-yy" [(ngModel)]="releaseDateInput"></p-calendar>
+          </label>
+        </div>
+      </div>
+
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <label for="authorInput">
+            <span i18n="@@author">Author</span>
+            <p-dropdown id="authorInput" [options]="authors" [(ngModel)]="authorInput"
+                        placeholder="Choose one"></p-dropdown>
+          </label>
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <label for="dictionariesInput">
+            <span i18n="@@dictionaryCategories">Dictionary categories</span>
+            <p-multiSelect id="dictionariesInput" [options]="dictionaryCategories" optionLabel="name"
+                           [(ngModel)]="dictionaryCategoriesInput"></p-multiSelect>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p-footer>
+    <div class="p-grid">
+      <div class="p-col-fixed">
+        <button pButton type="button" label="Save" icon="pi pi-plus" class="ui-button" i18n-label="@@save"
+                [disabled]="notAllFieldsProvided()"
+                (click)="saveBook()"></button>
+      </div>
+      <div class="p-col-fixed">
+        <button pButton type="button" label="Back" icon="pi pi-chevron-left" class="ui-button-secondary"
+                i18n-label="@@back"
+                (click)="hideDialog()"></button>
+      </div>
+    </div>
+  </p-footer>
+</p-dialog>

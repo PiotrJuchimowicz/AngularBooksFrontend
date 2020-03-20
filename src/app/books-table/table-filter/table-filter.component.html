@@ -1,0 +1,45 @@
+<div class="p-grid">
+  <div class="p-col-2">
+    <input type="text" pInputText placeholder="ISBN" [(ngModel)]="isbnFilter"/>
+  </div>
+  <div class="p-col-2">
+    <input type="text" pInputText placeholder="Title" i18n-placeholder="@@title" [(ngModel)]="titleFilter"/>
+  </div>
+  <div class="p-col-2">
+    <p-multiSelect [options]="authors" [(ngModel)]="authorsFilter" defaultLabel="Authors"
+                   i18n-defaultLabel="@@authors"></p-multiSelect>
+  </div>
+</div>
+<div class="p-grid">
+  <div class="p-col-2">
+    <p-multiSelect [options]="users" [(ngModel)]="borrowersFilter" defaultLabel="Borrowers"
+                   i18n-defaultLabel="@@borrowers"></p-multiSelect>
+  </div>
+  <div class="p-col-2">
+    <span i18n="@@numberOfPages">Number of pages</span>
+    > {{numberOfPagesFilter}}
+    <p-slider [style]="{'width':'100%','margin-top':'8px'}" [(ngModel)]="numberOfPagesFilter" [min]="1"
+              [max]="5000"></p-slider>
+  </div>
+  <div class="p-col-2">
+    <span i18n="@@releaseDate">Release date</span>
+    > {{releaseDateFilter}}
+    <p-slider [style]="{'width':'100%','margin-top':'8px'}" [(ngModel)]="releaseDateFilter" [min]="1920"
+              [max]="2020"></p-slider>
+  </div>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-2">
+    <p-multiSelect [options]="dictionaryCategories" [(ngModel)]="dictionaryCategoriesFilter"
+                   defaultLabel="Dictionary categories" i18n-defaultLabel="@@dictionaryCategories"
+                   optionLabel="name"></p-multiSelect>
+  </div>
+  <div class="p-col-2">
+    <p-button label="Filter" i18n-label="@@buttonFilter" (onClick)="filterButtonClicked()"></p-button>
+  </div>
+  <div class="p-col-2">
+    <p-button styleClass="ui-button-warning" i18n-label="@@buttonClearFilter" label="Clear all"
+              (onClick)="clearFilterClicked()"></p-button>
+  </div>
+</div>
